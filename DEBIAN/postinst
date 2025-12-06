@@ -1,0 +1,12 @@
+#!/bin/bash
+set -e
+
+echo "Running ClearType Fonts installer..."
+
+/usr/share/cleartype-fonts-installer/install.sh
+
+echo "Removing installer script..."
+rm -f /usr/share/cleartype-fonts-installer/install.sh
+
+echo "Done."
+exit 0

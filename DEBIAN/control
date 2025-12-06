@@ -1,0 +1,8 @@
+Package: cleartype-fonts-installer
+Version: 1.0
+Section: misc
+Priority: optional
+Architecture: all
+Maintainer: Nasrullo <nasrullonurullaev5@gmail.com>
+Description: Installer for Microsoft ClearType Fonts
+ This package installs Microsoft ClearType TrueType fonts into the system.
