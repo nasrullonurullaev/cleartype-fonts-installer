@@ -1,0 +1,28 @@
+name: Build DEB package
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install tools
+        run: sudo apt update && sudo apt install -y dpkg-dev
+
+      - name: Build package
+        run: |
+          mkdir -p build
+          dpkg-deb --build debian-build build/cleartype-fonts-installer.deb
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: cleartype-fonts-installer
+          path: build/cleartype-fonts-installer.deb
