@@ -19,7 +19,7 @@ jobs:
       - name: Build package
         run: |
           mkdir -p build
-          dpkg-deb --build debian-build build/cleartype-fonts-installer.deb
+          dpkg-deb --build . build/cleartype-fonts-installer.deb
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
