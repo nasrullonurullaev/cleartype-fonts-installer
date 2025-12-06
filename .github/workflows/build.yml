@@ -22,7 +22,7 @@ jobs:
           dpkg-deb --build debian-build build/cleartype-fonts-installer.deb
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: cleartype-fonts-installer
           path: build/cleartype-fonts-installer.deb
